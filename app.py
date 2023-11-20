@@ -4,8 +4,8 @@ import services
 
 app = Flask(__name__)
 
-@app.route('/bienvenido', methods=['GET'])
-def  bienvenido():
+@app.route('/bienvenue', methods=['GET'])
+def  bienvenue():
     return 'Hola mundo bigdateros, desde Flask'
 
 @app.route('/webhook', methods=['GET'])
