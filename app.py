@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/bienvenue', methods=['GET'])
 def  bienvenue():
-    return 'Hola mundo bigdateros, desde Flask'
+    return 'Bonjour chez assurema, de Flask'
 
 @app.route('/webhook', methods=['GET'])
 def verificar_token():
@@ -17,7 +17,7 @@ def verificar_token():
         if token == sett.token and challenge != None:
             return challenge
         else:
-            return 'token incorrecto', 403
+            return 'token incorrecte', 403
     except Exception as e:
         return e,403
     
@@ -36,10 +36,10 @@ def recibir_mensajes():
         text = services.obtener_Mensaje_whatsapp(message)
 
         services.administrar_chatbot(text, number,messageId,name)
-        return 'enviado'
+        return 'envoyé'
 
     except Exception as e:
-        return 'no enviado ' + str(e)
+        return 'non envoyé ' + str(e)
 
 if __name__ == '__main__':
     app.run()
