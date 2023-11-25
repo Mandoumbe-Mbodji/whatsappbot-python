@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 import sett 
 import services
 
@@ -7,6 +7,10 @@ app = Flask(__name__)
 @app.route('/bienvenue', methods=['GET'])
 def  bienvenue():
     return 'Bonjour chez assurema, de Flask'
+
+@app.route('/formulaire')
+def index():
+    return render_template('index.html')
 
 @app.route('/webhook', methods=['GET'])
 def verificar_token():
@@ -43,3 +47,5 @@ def recibir_mensajes():
 
 if __name__ == '__main__':
     app.run()
+
+
