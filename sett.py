@@ -1,8 +1,8 @@
-token = 'Dacey_auth'
+token ='Dacey_auth'
 
 whatsapp_token = 'EAASTetfBLvIBOwrP7EKBKNRMh1LNbyao26irIEL03IuZCVz7eK3Mfdl4FkZCgiHa90ZCNoH1w6EcOSHKZAk9ntrd3lipSk7AOacymPpmWTbF6zwN2z2SZC5lCTZCuwChzjmax0yl6LLw2a8hFVZCwO9Qe7EsuExkWDrsNMuHYAjWZBwZCHZBRsJdgAWsR9LvsEGcYl' #Token a généré paramétres entreprise/utilisateurs system
 
-whatsapp_url = 'https://graph.facebook.com/v17.0/messages'
+whatsapp_url = 'https://graph.facebook.com/v17.0/187386554449865/messages'
 
 stickers = {
     "poyo_feliz": 984778742532668,

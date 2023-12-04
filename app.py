@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, abort
 import sett 
 import services
 
@@ -10,20 +10,25 @@ def  bienvenue():
 
 @app.route('/formulaire')
 def index():
-    return render_template('index.html')
-
+    return render_template('login.html')
+#############################   Webhookkkk ##################
 @app.route('/webhook', methods=['GET'])
 def verificar_token():
     try:
+        # Récupérer le token de vérification et le challenge de la requête
         token = request.args.get('hub.verify_token')
         challenge = request.args.get('hub.challenge')
 
-        if token == sett.token and challenge != None:
+        # Comparer le token avec celui défini dans vos paramètres de configuration
+        if token == sett.token and challenge is not None:
+            # Renvoyer le challenge pour compléter le processus de vérification
             return challenge
         else:
-            return 'token incorrecte', 403
+            # Renvoyer une erreur 403 si le token est incorrect ou si le challenge est manquant
+            abort(403, 'Token incorrect ou challenge manquant')
     except Exception as e:
-        return e,403
+        # Renvoyer une erreur 403 en cas d'exception non gérée
+        abort(403, str(e))
     
 @app.route('/webhook', methods=['POST'])
 def recibir_mensajes():

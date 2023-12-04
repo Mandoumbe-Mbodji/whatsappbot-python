@@ -18,7 +18,7 @@ def obtener_Mensaje_whatsapp(message):
     elif typeMessage == 'interactive' and message['interactive']['type'] == 'button_reply':
         text = message['interactive']['button_reply']['title']
     else:
-        text = 'mensaje no procesado'
+        text = 'message non traité'
     
     
     return text
@@ -29,7 +29,7 @@ def envoi_Msg_whatsapp(data):
         whatsapp_url = sett.whatsapp_url
         headers = {'Content-Type': 'application/json',
                    'Authorization': 'Bearer ' + whatsapp_token}
-        print("se envia ", data)
+        print("est envoyé ", data)
         response = requests.post(whatsapp_url, 
                                  headers=headers, 
                                  data=data)
@@ -55,7 +55,7 @@ def text_Message(number,text):
     )
     return data
 
-def buttonReply_Message(number, options, body, footer, sedd,messageId):
+def buttonReply_Message(number, options, body, footer, sedd, messageId):
     buttons = []
     for i, option in enumerate(options):
         buttons.append(
@@ -204,6 +204,7 @@ def replyText_Message(number, messageId, text):
 def markRead_Message(messageId):
     data = json.dumps(
         {
+
             "messaging_product": "whatsapp",
             "status": "read",
             "message_id":  messageId
@@ -221,6 +222,7 @@ def administrar_chatbot(text,number, messageId, name):
     time.sleep(2)
 
     if "hola" in text:
+        headers = {'Content-Type': 'application/json'}
         body = "Bonjour 👋 Bienvenue sur Assurema, comment pouvons-nous vous aider aujourd'hui ?"
         footer = "Equipe Assurema"
         options = ["✅ 1- Découvrez les packs", "✅ 2-  Renouvellement d'assurance","✅ 3- Trouver une agence","📅 4- Prendre rendez-vous pour une meilleur prise en charge"]
