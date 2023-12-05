@@ -1,6 +1,6 @@
 token ='Dacey_auth'
 
-whatsapp_token = 'EAASTetfBLvIBOwrP7EKBKNRMh1LNbyao26irIEL03IuZCVz7eK3Mfdl4FkZCgiHa90ZCNoH1w6EcOSHKZAk9ntrd3lipSk7AOacymPpmWTbF6zwN2z2SZC5lCTZCuwChzjmax0yl6LLw2a8hFVZCwO9Qe7EsuExkWDrsNMuHYAjWZBwZCHZBRsJdgAWsR9LvsEGcYl' #Token a généré paramétres entreprise/utilisateurs system
+whatsapp_token = 'EAASTetfBLvIBOz1HfZAGZBHv5e5Y3fLEnLsT3ZBVKGVZBZClQMpNmGkmoS0dj0LqKZBmkIGERRxSwSRvhhZBmu5cAmyqoDmK5yB9CWd2uJFxrpSdbttBZBXSPJUjU7F9gPHwVjczvys2feXUChiCDvZAdq7O6dKJxXfwbHEIIsiaYD3PZAeMTIkoUIrLcz41rwzraVgIMKdmZBtkJVbiQASJfkZD'
 
 whatsapp_url = 'https://graph.facebook.com/v17.0/187386554449865/messages'
 
@@ -20,4 +20,3 @@ stickers = {
     "gato_cansado": 1021308728970759
 }
 
-document_url = "https://www.africau.edu/images/default/sample.pdf"

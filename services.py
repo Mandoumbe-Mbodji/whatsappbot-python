@@ -116,10 +116,10 @@ def listReply_Message(number, options, body, footer, sedd,messageId):
                     "text": footer
                 },
                 "action": {
-                    "button": "Ver Opciones",
+                    "button": "Voir Options",
                     "sections": [
                         {
-                            "title": "Secciones",
+                            "title": "Sections",
                             "rows": rows
                         }
                     ]

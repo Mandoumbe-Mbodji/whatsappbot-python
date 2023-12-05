@@ -23,13 +23,13 @@
                 </div>
                 <span>or use your email for registeration</span>
                 <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
+                <input type="email" placeholder="Email">s
                 <input type="password" placeholder="Password">
                 <button>Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in">
-            <form>
+            <form action="/scripts/process_login.php" method="post">
                 <h1>Sign In</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -41,8 +41,7 @@
                 <input type="email" placeholder="Email" id="email" required>
                 <input type="password" placeholder="Password" id="password" required>
                 <a href="#">Forget Your Password?</a>
-               <!-- <input type="submit"  value="sign in"> -->
-                <button onclick="auth()">Sign In  </button>
+                <button>Sign In  </button>
             </form>
         </div>
         <div class="toggle-panel toggle-right">
@@ -61,25 +60,14 @@
                 <div class="toggle-panel toggle-right">
                     <h1>Hello, Friend!</h1>
                     <p>Register with your personal details to use all of site features</p>
-                    <button class="hidden" id="register"  href="inscription.html">Sign Up</button>
+                    <button class="hidden" id="register">Sign Up</button>
                 </div>
             </div>
         </div>
     </div>
     
     <script >
-        function auth(){
-            var email = document.getElementById("email").value;
-            var password= document.getElementById("password").value;
-            if (email=="papemb59@gmail.com" && password=="12345"){
-                window.location.assign("index.html");
-                alert("login succesful");
-            }
-            else{
-                alert("saisie incorrecte");
-                return;
-            }
-        }
+
     </script>
 </body>
 
